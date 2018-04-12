@@ -1,0 +1,164 @@
+<!--<header class="container-fluid">-->
+  <!--<div class="header">-->
+    <!--<div class="container">-->
+      <!--<div class="logo">-->
+        <!--<a href="index.php">-->
+          <!--<img [src]="logoImg">-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse" (click)="onToggleMenu()">-->
+    <!--<span class="header-toggler-icon"></span>-->
+  <!--</a>-->
+  <!--<div class="header-nav d-none d-lg-flex" [ngClass]="{'toggleMenuStyle' : toggleMenu === true}">-->
+    <!--<div class="container">-->
+      <!--<div class="row align-items-center">-->
+        <!--<div class="col">-->
+          <!--<ul class="nav nav-tabs">-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" [routerLink]="['home']"><i class="ion-home"></i> Home</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a href="javascript:void(0)" class="nav-link"><i class="fe fe-box"></i> Interface</a>-->
+              <!--<div class="nav-submenu nav">-->
+                <!--<a href="./cards.html" class="nav-item ">Cards design</a>-->
+                <!--<a href="./charts.html" class="nav-item ">Charts</a>-->
+                <!--<a href="./pricing-cards.html" class="nav-item ">Pricing cards</a>-->
+              <!--</div>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a href="javascript:void(0)" class="nav-link"><i class="fe fe-calendar"></i> Components</a>-->
+              <!--<div class="nav-submenu nav">-->
+                <!--<a href="./maps.html" class="nav-item ">Maps</a>-->
+                <!--<a href="./icons.html" class="nav-item ">Icons</a>-->
+                <!--<a href="./store.html" class="nav-item ">Store</a>-->
+                <!--<a href="./blog.html" class="nav-item ">Blog</a>-->
+              <!--</div>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a href="javascript:void(0)" class="nav-link"><i class="fe fe-file"></i> Pages</a>-->
+              <!--<div class="nav-submenu nav">-->
+                <!--<a href="./profile.html" class="nav-item ">Profile</a>-->
+                <!--<a href="./login.html" class="nav-item ">Login</a>-->
+                <!--<a href="./register.html" class="nav-item ">Register</a>-->
+                <!--<a href="./forgot-password.html" class="nav-item ">Forgot password</a>-->
+                <!--<a href="./400.html" class="nav-item ">400 error</a>-->
+                <!--<a href="./401.html" class="nav-item ">401 error</a>-->
+                <!--<a href="./403.html" class="nav-item ">403 error</a>-->
+                <!--<a href="./404.html" class="nav-item ">404 error</a>-->
+                <!--<a href="./500.html" class="nav-item ">500 error</a>-->
+                <!--<a href="./503.html" class="nav-item ">503 error</a>-->
+                <!--<a href="./email.html" class="nav-item ">Email</a>-->
+                <!--<a href="./empty.html" class="nav-item ">Empty page</a>-->
+              <!--</div>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a href="./form-elements.html" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" [routerLink]="['gallery']"><i class="ion-image"></i> Gallerij</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" [routerLink]="['about']"><i class="ion-person"></i> Over ons</a>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="col-3 ml-auto">-->
+          <!--<form class="input-icon">-->
+            <!--<input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">-->
+            <!--<div class="input-icon-addon">-->
+              <!--<i class="ion-search"></i>-->
+            <!--</div>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</header>-->
+
+<!--<div class="page">-->
+  <!--<div class="page-main">-->
+<header class="container-fluid">
+    <div class="header py-4">
+      <div class="container">
+        <div class=" logo">
+          <div class="logo">
+            <a [routerLink]="['home']">
+              <img [src]="logoImg">
+            </a>
+          </div>
+          <a class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse" (click)="onToggleMenu()">
+            <span class="header-toggler-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse" [ngClass]="{'toggleMenuStyle' : toggleMenu === true}">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3 ml-auto">
+            <form class="input-icon my-3 my-lg-0">
+              <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+              <div class="input-icon-addon">
+                <i class="ion-search"></i>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg order-lg-first">
+            <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home']"><i class="ion-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
+                <div class="dropdown-menu dropdown-menu-arrow">
+                  <a href="./cards.html" class="dropdown-item ">Cards design</a>
+                  <a href="./charts.html" class="dropdown-item ">Charts</a>
+                  <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
+                <div class="dropdown-menu dropdown-menu-arrow">
+                  <a href="./maps.html" class="dropdown-item ">Maps</a>
+                  <a href="./icons.html" class="dropdown-item ">Icons</a>
+                  <a href="./store.html" class="dropdown-item ">Store</a>
+                  <a href="./blog.html" class="dropdown-item ">Blog</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>
+                <div class="dropdown-menu dropdown-menu-arrow">
+                  <a href="./profile.html" class="dropdown-item ">Profile</a>
+                  <a href="./login.html" class="dropdown-item ">Login</a>
+                  <a href="./register.html" class="dropdown-item ">Register</a>
+                  <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
+                  <a href="./400.html" class="dropdown-item ">400 error</a>
+                  <a href="./401.html" class="dropdown-item ">401 error</a>
+                  <a href="./403.html" class="dropdown-item ">403 error</a>
+                  <a href="./404.html" class="dropdown-item ">404 error</a>
+                  <a href="./500.html" class="dropdown-item ">500 error</a>
+                  <a href="./503.html" class="dropdown-item ">503 error</a>
+                  <a href="./email.html" class="dropdown-item ">Email</a>
+                  <a href="./empty.html" class="dropdown-item ">Empty page</a>
+                  <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="./form-elements.html" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['gallery']"><i class="ion-image"></i> Gallerij</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['about']"><i class="ion-person"></i> Over ons</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+  <!--</div>-->
+<!--</div>-->

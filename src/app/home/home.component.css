@@ -1,0 +1,73 @@
+@media(max-width: 1060px){
+  .home-merken li{
+    width: 35% !important;
+  }
+}
+.home-info {
+  margin-top: 15px;
+  overflow: hidden;
+  margin: 25px 0 25px 0;
+}
+
+.home-info h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home-merken li {
+  list-style: none;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  margin: 30px 2% 0 0;
+  float: left;
+  width: 17.33%;
+}
+
+.home-merken img {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.card-home {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 100%;
+  /*padding-top: 10%;*/
+  /*padding-bottom: 10%;*/
+  /*margin-bottom: 10%;*/
+}
+
+.card-home:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-home {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 40, 100, 0.12);
+  border-radius: 3px;
+}
+
+.card-image {
+  width: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding-bottom: 10%;*/
+  /*padding-top: 10%;*/
+}
+
+.page-content {
+  font-family: 'Lato', sans-serif;
+}
