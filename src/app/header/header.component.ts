@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
   logoImg: string;
   toggleMenu = false;   // store state
+
   constructor(private router: Router) {
     this.logoImg = 'assets/images/hipenco.png'
   }
