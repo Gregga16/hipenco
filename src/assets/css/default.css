@@ -22,6 +22,7 @@
 .custom-name {
   float: left;
   width: 75%;
+  font-size: 12px;
 }
 
 .custom-likes{

@@ -47,3 +47,38 @@
   display: block;
 }
 
+.header-nav {
+  padding-top: 0.5rem;
+  /*padding-bottom: 1rem;*/
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+  color: black;
+}
+.header-nav .nav-tabs {
+  /*padding-top: 0.55rem;*/
+}
+.header-nav .nav-link{
+  padding: 0.55rem;
+  height: 50px;
+}
+
+.header-nav .nav-item {
+  min-width: 2rem;
+  transition: .3s color;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  /*line-height: 1;*/
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*.nav-link, .nav-item{*/
+  /*padding: 0.55rem;*/
+
+/*}*/
+
