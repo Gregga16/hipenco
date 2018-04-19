@@ -11,7 +11,8 @@
 }
 
 .image-background {
-  margin-bottom: 30px;
+  height: 45vh;
+  object-fit: cover;
 }
 .custom-bottom {
   position: absolute;
@@ -45,3 +46,9 @@
   border: 1px solid rgba(0, 40, 100, 0.12);
   border-radius: 3px;
 }
+
+.text-muted {
+  /*font-size: 13px;*/
+}
+
+
