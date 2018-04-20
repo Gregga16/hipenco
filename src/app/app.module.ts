@@ -9,11 +9,13 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'product', component: ProductsComponent}
 ];
 
 
@@ -24,7 +26,8 @@ const routes: Routes = [
     GalleryComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

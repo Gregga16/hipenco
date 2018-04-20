@@ -6,3 +6,16 @@
 .card-body strong {
   font-size: 13px;
 }
+
+.image-round {
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.border-line {
+  border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+}

@@ -7,7 +7,7 @@ $( document ).ready(function(){
     accessToken: '5757010050.16273a3.93baf13b87f446e3a87651b69cb28e8b',
     sortBy: 'most-recent',
     template: '' +
-    '<div class="col-lg-4">\n' +
+    '<div class="col-lg-4 col-md-6">\n' +
     '      <div class="card p-3">\n' +
     '        <a href="{{link}}" title="{{caption}}" target="_blank"><img class="card-img-top image-background" src="{{image}}"></a>\n' +
     '        <div class="card-body d-flex flex-column">\n' +
