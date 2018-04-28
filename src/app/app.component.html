@@ -1,24 +1,26 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-
+<div class="container mt-4">
+  <flash-messages></flash-messages>
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
 <div id="container-floating">
-
-  <!--<div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>-->
-  <!--<div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img-->
-  <!--class="reminder">-->
-  <!--<p class="letter">A</p>-->
-  <!--</div>-->
-  <!--<div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder"><img-->
-  <!--class="reminder"-->
-  <!--src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/ic_reminders_speeddial_white_24dp.png"/></div>-->
-  <div class="nd1 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
+  <div *ngIf="edited" class="nd1 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
     <div class="content-inner">
-      <!--<div class="card-header">-->
-      <!--<h3 class="card-title">Contact US!</h3>-->
-      <!--</div>-->
       <div class="content-header">
-        <div class="ion-android-contact">
-          <span>CONTACT US!</span></div>
+        <div class="row">
+          <div class="content-header-left">
+            <div class="ion-android-contact"></div>
+          </div>
+          <div class="content-header-middle text-center">
+            <span>CONTACT US!</span>
+          </div>
+          <div class="content-header-right">
+            <div>
+              <button (click)="openDetails()"><i class="ion-minus-round"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="content-top">
         <div class="content-text">
@@ -30,73 +32,83 @@
           <tbody>
           <tr class="conversation-form">
             <td>
-              <form action="" method="post">
-                <ul class="reset">
-                  <li>
-                    <div class="input-placeholder">
-                      <input class="form-control" type="text" required>
-                      <div class="placeholder">
-                        Name
+              <div *ngIf="modelEmail !== undefined">
+                <form name="form" [formGroup]="myform" (ngSubmit)="sendEmail()" #f="ngForm" novalidate
+                      autocomplete="on">
+                  <ul class="reset">
+                    <li>
+                      <div class="input-placeholder" [ngClass]="{
+                      'has-danger': name.invalid && (name.dirty || name.touched),
+                      'has-success': name.valid && (name.dirty || name.touched)}">
+                        <input type="text"
+                               class="form-control"
+                               formControlName="name"
+                               [(ngModel)]="modelEmail.customerName" required>
+                        <div class="placeholder">
+                          Name
+                        </div>
+                        <div class="form-control-feedback"
+                             *ngIf="name.errors && (name.dirty || name.touched)">
+                          <div *ngIf="name.errors " class="alert-circle"><a><i class="ion-alert-circled"></i></a></div>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="input bubble">
-                    <div class="input-placeholder">
-                      <input class="form-control" type="text" required>
-                      <div class="placeholder">
-                        Email
+                    </li>
+                    <li>
+                      <div class="input-placeholder" [ngClass]="{
+                      'has-danger': email.invalid && (email.dirty || email.touched),
+                      'has-success': email.valid && (email.dirty || email.touched)}">
+                        <input type="text"
+                               class="form-control"
+                               formControlName="email"
+                               [(ngModel)]="modelEmail.customerEmail" required>
+                        <div class="placeholder">
+                          Email
+                        </div>
+                        <div class="form-control-feedback"
+                             *ngIf="email.errors && (email.dirty || email.touched)">
+                          <div *ngIf="email.errors" class="alert-circle"><a><i class="ion-alert-circled"></i></a></div>
+                          <p style="font-size: 12px" *ngIf="email.errors">Email is niet correct!</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li>
-                      <span class="bubble">
-                        <textarea class="form-control"></textarea>
+                    </li>
+                    <li class="bubble">
+                      <div class="input-placeholder" [ngClass]="{
+                      'has-danger': message.invalid && (message.dirty || message.touched),
+                      'has-success': message.valid && (message.dirty || message.touched)}">
+                        <textarea type="text"
+                                  class="form-control"
+                                  formControlName="message"
+                                  [(ngModel)]="modelEmail.emailMessage" required></textarea>
                         <div class="placeholder">
                           Message
                         </div>
-                      </span>
-                  </li>
-                </ul>
-              </form>
+                        <div class="form-control-feedback"
+                             *ngIf="message.errors && (message.dirty || message.touched)">
+                          <div *ngIf="message.errors" class="alert-circle"><a><i class="ion-alert-circled"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <button type="submit" class="btn btn-gray btn-block">Send email</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
             </td>
           </tr>
           </tbody>
         </table>
       </div>
-      <div class="content-bottom">
-
-      </div>
+      <!--<div class="content-bottom">-->
+      <!--</div>-->
     </div>
   </div>
-
   <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create"
-       onclick="newmail()">
+       (click)="openDetails()">
     <p class="plus ion-email"></p>
-    <!--<img class="edit" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">-->
   </div>
-
 </div>
-
-<!--<div class="zoom">-->
-<!--<a class="zoom-fab zoom-btn-large" id="zoomBtn">Open</a>-->
-<!--<ul class="zoom-menu">-->
-<!--<li><a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out">Action 1</a></li>-->
-<!--<li><a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition scale-out">Action 2</a></li>-->
-<!--<li><a class="zoom-fab zoom-btn-sm zoom-btn-tangram scale-transition scale-out">Action 3</a></li>-->
-<!--<li><a class="zoom-fab zoom-btn-sm zoom-btn-report scale-transition scale-out">Action 4</a></li>-->
-<!--<li><a class="zoom-fab zoom-btn-sm zoom-btn-feedback scale-transition scale-out">Action 5</a></li>-->
-<!--</ul>-->
-<!--<div class="zoom-card scale-transition scale-out">-->
-<!--<ul class="zoom-card-content">-->
-<!--<li>Content 1</li>-->
-<!--<li>Content 2</li>-->
-<!--<li>Content 3</li>-->
-<!--<li>Content 4</li>-->
-<!--<li>Content 5</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<app-footer></app-footer>
 
 
 

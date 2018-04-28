@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
+import {HttpClientModule} from '@angular/common/http';
+import {EmailService} from './_services/email.service';
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashService} from './_services/flash.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -32,9 +36,15 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    ReactiveFormsModule,
+    HttpClientModule,
+    FlashMessagesModule.forRoot(),
+    RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    EmailService,
+    FlashService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
