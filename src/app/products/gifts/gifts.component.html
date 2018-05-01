@@ -1,0 +1,100 @@
+<div class="page-content">
+  <div class="my-3 my-md-5">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">
+          Cadeaubonnen
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 5,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 10,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 15,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 20,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 25,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-aside p-3">
+            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <div class="card-body d-flex flex-column">
+              <div class="text-muted text-small">Cadeaubon ter waarde van
+              </div>
+              <br>
+              <div><h4>€ 30,00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title">Cadeaubon</h4>
+          <a class="close" aria-label="Close" (click)="d('Cross click')">
+          </a>
+        </div>
+        <div class="modal-body">
+          <a class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
