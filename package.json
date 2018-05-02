@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.1.2",
     "@types/googlemaps": "^3.30.8",
     "angular-instafeed": "^1.8.0",
     "angular2-flash-messages": "^2.0.5",

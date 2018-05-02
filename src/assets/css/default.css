@@ -1,5 +1,6 @@
 .container {
   font-family: Lato, sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .instaimg img {
@@ -47,25 +48,6 @@
   border: 1px solid rgba(0, 40, 100, 0.12);
   border-radius: 3px;
 }
-
-
-/*#presentation{*/
-  /*width: 480px;*/
-  /*height: 120px;*/
-  /*padding: 20px;*/
-  /*margin: auto;*/
-  /*background: #FFF;*/
-  /*margin-top: 10px;*/
-  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
-  /*transition: all 0.3s;*/
-  /*border-radius: 3px;*/
-/*}*/
-
-/*#presentation:hover{*/
-  /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
-  /*transition: all 0.3s;*/
-  /*transform: translateZ(10px);*/
-/*}*/
 
 #floating-button{
   display: block;
