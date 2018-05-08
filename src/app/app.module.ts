@@ -22,7 +22,7 @@ import { HappyhComponent } from './products/happyh/happyh.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
+  // {path: 'home', component: HomeComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'about', component: AboutComponent},
   {path: 'product', component: ProductsComponent},
