@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img
+            <a style="cursor: zoom-in" (click)="open(content, 'happyhorse/rabbit_blue')" class="card-aside-column card-image"><img
               src="assets/images/happyhorse/rabbit_blue.jpg"></a>
             <div class="card-body d-flex flex-column">
               <div class="text-muted text-small">Deep Blue Rabbit Richie
@@ -60,7 +60,7 @@
         </div>
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img
+            <a style="cursor: zoom-in" (click)="open(content, 'happyhorse/rabbit_white')" class="card-aside-column card-image"><img
               src="assets/images/happyhorse/rabbit_white.jpg"></a>
             <div class="card-body d-flex flex-column">
               <div class="text-muted text-small">Ivory Linen Rabbit Richie
@@ -103,7 +103,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img
+            <a style="cursor: zoom-in" (click)="open(content, 'happyhorse/rabbit_pink')" class="card-aside-column card-image"><img
               src="assets/images/happyhorse/rabbit_pink.jpg"></a>
             <div class="card-body d-flex flex-column">
               <div class="text-muted text-small">Pink Rabbit Richie
@@ -144,7 +144,7 @@
         </div>
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img
+            <a style="cursor: zoom-in" (click)="open(content, 'happyhorse/rabbit_green')" class="card-aside-column card-image"><img
               src="assets/images/happyhorse/rabbit_green.jpg"></a>
             <div class="card-body d-flex flex-column">
               <div class="text-muted text-small">Lagoon Rabbit Richie
@@ -184,14 +184,14 @@
           </div>
         </div>
       </div>
-      <ng-template #content let-c="close" let-d="dismiss">
+      <ng-template #content #img let-c="close" let-d="dismiss">
         <div class="modal-header">
-          <h4 class="modal-title">Cadeaubon</h4>
+          <!--<h4 class="modal-title">Cadeaubon</h4>-->
           <a class="close" aria-label="Close" (click)="d('Cross click')">
           </a>
         </div>
         <div class="modal-body">
-          <a class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+          <a class="card-aside-column card-image"><img [src]="image"></a>
         </div>
       </ng-template>
     </div>

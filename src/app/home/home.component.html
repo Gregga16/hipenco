@@ -10,69 +10,87 @@
         <div class="card-about">
           <div class="card-body">
             <div class="row row-cards row-deck">
-              <div class="col-md-3">
-                <img src="assets/images/shoes/_lightgreen.jpg">
+              <div class="col-md-4">
+                <img style="cursor: zoom-in" (click)="open(content, 'shop_outside')"
+                     class="image-margin image-background" src="assets/images/shop_outside.jpg">
               </div>
-              <div class="col-md-3">
-                <img src="assets/images/shoes/_lightgreen.jpg">
+              <div class="col-md-4">
+                <img style="cursor: zoom-in" (click)="open(content, 'shop_inside')"
+                     class="image-margin image-background" src="assets/images/shop_inside.jpg">
               </div>
-              <div class="col-md-3">
-                <img src="assets/images/shoes/_lightgreen.jpg">
+              <div class="col-md-4">
+                <img style="cursor: zoom-in" (click)="open(content, 'shop_bali')" class="image-margin image-background" src="assets/images/shop_bali.jpg">
               </div>
-              <div class="col-md-3">
-                <img src="assets/images/shoes/_lightgreen.jpg">
-              </div>
+              <!--<div class="col-md-3">-->
+              <!--<img class="image-background" src="assets/images/shoes/_lightgreen.jpg">-->
+              <!--</div>-->
             </div>
-            <div class="row" style="margin-top: 50px; margin-bottom: 50px">
-              <div class="col-lg-12 text-center">
+            <div class="row" style="margin-top: 30px; margin-bottom: 60px">
+              <div class="text-center">
                 <div class="welcome-text">Welkom bij Hip & Co</div>
-                <div class="text-muted text-center">De leukste kinderkleding winkel van Brandevoort</div>
+                <div class="text-muted text-center" style="padding-left: 15%; padding-right: 15%;">Ben je bijvoorbeeld
+                  op zoek naar een leuk kraamcadeau, een goede jeans, een zomerse slipper of juist een regenlaarsje, dat
+                  ene jurkje of dat ene stoere jasje,
+                  loop dan snel eens binnen en laat je verrassen.
+                  Van dinsdag tot en met zaterdag staat de koffie, thee en ranja klaar. Natuurlijk met iets lekkers
+                  erbij.
+                </div>
               </div>
             </div>
-            <div class="row col-lg-12">
-              <div class="col-lg-5 text-center">
-                <a [routerLink]="['product']" class="btn btn-secondary">Assortiment</a>
+            <div class="row col-lg-12" style="margin-bottom: 25px">
+              <div class="col-lg-3 text-center">
+                <a [routerLink]="['product']" class="btn btn-secondary btn-assort">Assortiment</a>
               </div>
-              <div class="col-lg-2 text-center">
-                <a [routerLink]="['about']" class="btn btn-secondary">Bezoek of Contact ons</a>
+              <div class="col-lg-6  text-center">
+                <a [routerLink]="['about']" class="btn btn-secondary btn-contact">Bezoek of Contact ons</a>
               </div>
-              <div class="col-lg-5 text-center">
-                <a [routerLink]="['gallery']" class="btn btn-secondary">Gallerij</a>
+              <div class="col-lg-3 text-center">
+                <a [routerLink]="['gallery']" class="btn btn-secondary btn-assort">Gallerij</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <ng-template #content #img let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <a class="close" aria-label="Close" (click)="d('Cross click')">
+        </a>
+      </div>
+      <div class="modal-body">
+        <a class="card-aside-column card-image"><img [src]="image"></a>
+      </div>
+    </ng-template>
     <div class="row">
       <div class="col-lg-8">
         <div class="card p-3">
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 ">
-              <a href="assets/images/shoes/_blue.jpg" target="_blank"><img class="card-img-top image-margin"
-                                                                           src="assets/images/shoes/_blue.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_blue')"><img class="card-img-top image-margin"
+                                                                                      src="assets/images/shoes/_blue.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-              <a href="assets/images/shoes/_lightblue.jpg" target="_blank"><img class="card-img-top image-margin"
-                                                                                src="assets/images/shoes/_lightblue.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_lightblue')"><img
+                class="card-img-top image-margin"
+                src="assets/images/shoes/_lightblue.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-              <a href="assets/images/shoes/_pink.jpg" target="_blank"><img class="card-img-top image-margin"
-                                                                           src="assets/images/shoes/_pink.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_pink')"><img class="card-img-top image-margin"
+                                                                                      src="assets/images/shoes/_pink.jpg"></a>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 p-3">
-              <a href="assets/images/shoes/_green.jpg" target="_blank"><img class="card-img-top"
-                                                                            src="assets/images/shoes/_green.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_green')"><img class="card-img-top"
+                                                                                       src="assets/images/shoes/_green.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 p-3">
-              <a href="assets/images/shoes/_lightgreen.jpg" target="_blank"><img class="card-img-top"
-                                                                                 src="assets/images/shoes/_lightgreen.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_lightgreen')"><img class="card-img-top"
+                                                                                            src="assets/images/shoes/_lightgreen.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 p-3">
-              <a href="assets/images/shoes/_red.jpg" target="_blank"><img class="card-img-top"
-                                                                          src="assets/images/shoes/_red.jpg"></a>
+              <a style="cursor: zoom-in" (click)="open(content, '/shoes/_red')"><img class="card-img-top"
+                                                                                     src="assets/images/shoes/_red.jpg"></a>
             </div>
           </div>
         </div>
@@ -85,34 +103,33 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card-about">
-          <div class="card-body">
-            <p> Lorem ipsum dolor sit amet, nec auctor a morbi porro, varius justo dui, placerat massa rutrum est,
-              nonummy sit dolor ac etiam, nisl libero sodales sagittis dictum pellentesque vitae. Vestibulum faucibus
-              placerat erat, commodo erat pellentesque mollis in sollicitudin, dignissim egestas, vestibulum tellus
-              vitae lacinia vivamus a nec, eros dui hendrerit. Vestibulum id, ipsum sapien suspendisse, et sed et
-              nulla dictum. Ipsum ullamcorper wisi arcu tincidunt ornare. Quam posuere gravida malesuada, mollis dis
-              in faucibus, sed cum nullam risus sagittis in veniam, est mi ullamcorper et magni etiam. Duis dignissim
-              vel morbi nulla orci morbi, vivamus a vel volutpat, nec sem aliquet nulla tempor nonummy, elit
-              consectetuer at eu. Interdum justo, tempor dolor ridiculus bibendum tortor urna, dui et praesent diam
-              turpis eu, lectus feugiat donec, aenean sed rutrum dictum. Quia nec vivamus, volutpat blandit quisque
-              nunc in dui in aenean sed rutrum dictum. Quia nec vivamus, volutpat aenean sed rutrum dictum. Quia nec
-              vivamus, volutpat aenean sed rutrum dictum. Quia nec vivamus, volutpat aenean sed rutrum dictum. Quia
-              nec vivamus, volutpat aenean sed rutrum dictum. Quia nec vivamus, volutpat</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--<div class="row">-->
+      <!--<div class="col-lg-12">-->
+        <!--<div class="card-about">-->
+          <!--<div class="card-body">-->
+            <!--<p> Lorem ipsum dolor sit amet, nec auctor a morbi porro, varius justo dui, placerat massa rutrum est,-->
+              <!--nonummy sit dolor ac etiam, nisl libero sodales sagittis dictum pellentesque vitae. Vestibulum faucibus-->
+              <!--placerat erat, commodo erat pellentesque mollis in sollicitudin, dignissim egestas, vestibulum tellus-->
+              <!--vitae lacinia vivamus a nec, eros dui hendrerit. Vestibulum id, ipsum sapien suspendisse, et sed et-->
+              <!--nulla dictum. Ipsum ullamcorper wisi arcu tincidunt ornare. Quam posuere gravida malesuada, mollis dis-->
+              <!--in faucibus, sed cum nullam risus sagittis in veniam, est mi ullamcorper et magni etiam. Duis dignissim-->
+              <!--vel morbi nulla orci morbi, vivamus a vel volutpat, nec sem aliquet nulla tempor nonummy, elit-->
+              <!--consectetuer at eu. Interdum justo, tempor dolor ridiculus bibendum tortor urna, dui et praesent diam-->
+              <!--turpis eu, lectus feugiat donec, aenean sed rutrum dictum. Quia nec vivamus, volutpat blandit quisque-->
+              <!--nunc in dui in aenean sed rutrum dictum. Quia nec vivamus, volutpat aenean sed rutrum dictum. Quia nec-->
+              <!--vivamus, volutpat aenean sed rutrum dictum. Quia nec vivamus, volutpat aenean sed rutrum dictum. Quia-->
+              <!--nec vivamus, volutpat aenean sed rutrum dictum. Quia nec vivamus, volutpat</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="">
       <h1 class="page-title">
         Onze merken
       </h1>
     </div>
     <div class="row row-cards">
-      <div class="col-6 ol-sm-4 col-lg-3">
+      <div class="col-6 col-sm-4 col-lg-3">
         <div class="card-home">
           <div class="card-image">
             <img [src]="retour">
@@ -171,193 +188,45 @@
     </div>
   </div>
 </div>
-
-<div class="my-3 my-md-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card-about">
-          <div class="card-header">
-            <h3 class="card-title">Carousel</h3>
-          </div>
-          <div class="card-body">
-            <div id="carousel-default" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" alt="" src="./assets/images/retour.png"
-                       data-holder-rendered="true">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" alt="" src="./assets/images/geisha.png"
-                       data-holder-rendered="true">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" alt="" src="./assets/images/lovestation.png"
-                       data-holder-rendered="true">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" alt="" src="./assets/images/flo.png"
-                       data-holder-rendered="true">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" alt="" src="./assets/images/geisha.png"
-                       data-holder-rendered="true">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--<div class="col-md-6">-->
-    <!--<div class="card">-->
-    <!--<div class="card-header">-->
-    <!--<h3 class="card-title">Carousel with indicators</h3>-->
+<!--<div class="my-3 my-md-5">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-6">-->
+        <!--<div class="card-about">-->
+          <!--<div class="card-header">-->
+            <!--<h3 class="card-title">Carousel</h3>-->
+          <!--</div>-->
+          <!--<div class="card-body">-->
+            <!--<div id="carousel-default" class="carousel slide" data-ride="carousel">-->
+              <!--<div class="carousel-inner">-->
+                <!--<div class="carousel-item active">-->
+                  <!--<img class="d-block w-100" alt="" src="./assets/images/retour.png"-->
+                       <!--data-holder-rendered="true">-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                  <!--<img class="d-block w-100" alt="" src="./assets/images/geisha.png"-->
+                       <!--data-holder-rendered="true">-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                  <!--<img class="d-block w-100" alt="" src="./assets/images/lovestation.png"-->
+                       <!--data-holder-rendered="true">-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                  <!--<img class="d-block w-100" alt="" src="./assets/images/flo.png"-->
+                       <!--data-holder-rendered="true">-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                  <!--<img class="d-block w-100" alt="" src="./assets/images/geisha.png"-->
+                       <!--data-holder-rendered="true">-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
     <!--</div>-->
-    <!--<div class="card-body">-->
-    <!--<div id="carousel-indicators" class="carousel slide" data-ride="carousel">-->
-    <!--<ol class="carousel-indicators">-->
-    <!--<li data-target="#carousel-indicators" data-slide-to="0" class="active"></li>-->
-    <!--<li data-target="#carousel-indicators" data-slide-to="1" class=""></li>-->
-    <!--<li data-target="#carousel-indicators" data-slide-to="2" class=""></li>-->
-    <!--<li data-target="#carousel-indicators" data-slide-to="3" class=""></li>-->
-    <!--<li data-target="#carousel-indicators" data-slide-to="4" class=""></li>-->
-    <!--</ol>-->
-    <!--<div class="carousel-inner">-->
-    <!--<div class="carousel-item active">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/aneta-ivanova-776-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/anthony-intraversato-257182-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/artem-sapegin-229391-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/bobby-burch-145906-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/casey-horner-339165-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-6">-->
-    <!--<div class="card">-->
-    <!--<div class="card-header">-->
-    <!--<h3 class="card-title">Carousel with controls</h3>-->
-    <!--</div>-->
-    <!--<div class="card-body">-->
-    <!--<div id="carousel-controls" class="carousel slide" data-ride="carousel">-->
-    <!--<div class="carousel-inner">-->
-    <!--<div class="carousel-item active">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/christian-joudrey-96208-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/christoph-bengtsson-lissalde-80291-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/clarisse-meyer-122804-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/cristina-gottardi-259243-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/david-klaasen-54203-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<a class="carousel-control-prev" href="#carousel-controls" role="button" data-slide="prev">-->
-    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Previous</span>-->
-    <!--</a>-->
-    <!--<a class="carousel-control-next" href="#carousel-controls" role="button" data-slide="next">-->
-    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Next</span>-->
-    <!--</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-6">-->
-    <!--<div class="card">-->
-    <!--<div class="card-header">-->
-    <!--<h3 class="card-title">Carousel with captions</h3>-->
-    <!--</div>-->
-    <!--<div class="card-body">-->
-    <!--<div id="carousel-captions" class="carousel slide" data-ride="carousel">-->
-    <!--<div class="carousel-inner">-->
-    <!--<div class="carousel-item active">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/david-marcu-114194-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--<div class="carousel-item-background d-none d-md-block"></div>-->
-    <!--<div class="carousel-caption d-none d-md-block">-->
-    <!--<h3>Slide label</h3>-->
-    <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/davide-cantelli-139887-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--<div class="carousel-item-background d-none d-md-block"></div>-->
-    <!--<div class="carousel-caption d-none d-md-block">-->
-    <!--<h3>Slide label</h3>-->
-    <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/dino-reichmuth-84359-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--<div class="carousel-item-background d-none d-md-block"></div>-->
-    <!--<div class="carousel-caption d-none d-md-block">-->
-    <!--<h3>Slide label</h3>-->
-    <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/eberhard-grossgasteiger-311213-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--<div class="carousel-item-background d-none d-md-block"></div>-->
-    <!--<div class="carousel-caption d-none d-md-block">-->
-    <!--<h3>Slide label</h3>-->
-    <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="carousel-item">-->
-    <!--<img class="d-block w-100" alt="" src="./demo/photos/geran-de-klerk-290418-1500.jpg"-->
-    <!--data-holder-rendered="true">-->
-    <!--<div class="carousel-item-background d-none d-md-block"></div>-->
-    <!--<div class="carousel-caption d-none d-md-block">-->
-    <!--<h3>Slide label</h3>-->
-    <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<a class="carousel-control-prev" href="#carousel-captions" role="button" data-slide="prev">-->
-    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Previous</span>-->
-    <!--</a>-->
-    <!--<a class="carousel-control-next" href="#carousel-captions" role="button" data-slide="next">-->
-    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Next</span>-->
-    <!--</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-  </div>
-</div>
+  <!--</div>-->
+<!--</div>-->
 
 
 

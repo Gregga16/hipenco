@@ -17,8 +17,11 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-3 ml-auto">
-          <form class="input-icon my-3 my-lg-0">
-            <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+          <form (ngSubmit)="doSearch()" class="input-icon my-3 my-lg-0">
+            <div class="form-group">
+            <input type="search" class="form-control header-search" placeholder="Search&hellip;" name="search"
+                   [(ngModel)]="term" required>
+            </div>
             <div class="input-icon-addon">
               <i class="ion-search"></i>
             </div>

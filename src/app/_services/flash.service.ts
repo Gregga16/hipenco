@@ -11,7 +11,7 @@ export class FlashService {
     this.base(message, 'alert-success', timeout)
   }
 
-  warn(message: string, timeout: number = 5000) {
+  warn(message: string, timeout: number = 1000) {
     this.base(message, 'alert-warning', timeout)
   }
 

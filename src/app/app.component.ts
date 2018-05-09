@@ -14,17 +14,10 @@ export class AppComponent {
   title = 'app';
   modelEmail = new Email('', '', '');
   public edited = false;
-  langs: string[] = [
-    'English',
-    'French',
-    'German',
-  ];
   myform: FormGroup;
   name: FormControl;
   email: FormControl;
   message: FormControl;
-
-  // composeOptions: email.ComposeOptions
 
   constructor(private emailService: EmailService, private flash: FlashService) {
     this.createFormControls();
@@ -63,13 +56,6 @@ export class AppComponent {
         });
     } else {
       this.flash.error('Niet alles is correct ingevuld!');
-    }
-  }
-
-  onSubmit() {
-    if (this.myform.valid) {
-      console.log('Form Submitted!');
-      this.myform.reset();
     }
   }
 
