@@ -10,14 +10,14 @@
       <div class="content-header">
         <div class="row">
           <div class="content-header-left">
-            <div class="ion-android-contact"></div>
+            <div class="ion-ios-contact"></div>
           </div>
           <div class="content-header-middle text-center">
             <span>CONTACT US!</span>
           </div>
           <div class="content-header-right">
             <div>
-              <button (click)="openDetails()"><i class="ion-minus-round"></i></button>
+              <button (click)="openDetails()"><i class="ion-md-remove"></i></button>
             </div>
           </div>
         </div>
@@ -43,13 +43,13 @@
                         <input type="text"
                                class="form-control"
                                formControlName="name"
-                               [(ngModel)]="modelEmail.customerName" required>
+                               [(ngModel)]="modelEmail.customerName" [value]="nameValue" required>
                         <div class="placeholder">
                           Name
                         </div>
                         <div class="form-control-feedback"
                              *ngIf="name.errors && (name.dirty || name.touched)">
-                          <div *ngIf="name.errors " class="alert-circle"><a><i class="ion-alert-circled"></i></a></div>
+                          <div *ngIf="name.errors " class="alert-circle"><a><i class="ion-ios-alert-circled"></i></a></div>
                         </div>
                       </div>
                     </li>
@@ -60,13 +60,13 @@
                         <input type="text"
                                class="form-control"
                                formControlName="email"
-                               [(ngModel)]="modelEmail.customerEmail" required>
+                               [(ngModel)]="modelEmail.customerEmail" [value]="emailValue" required>
                         <div class="placeholder">
                           Email
                         </div>
                         <div class="form-control-feedback"
                              *ngIf="email.errors && (email.dirty || email.touched)">
-                          <div *ngIf="email.errors" class="alert-circle"><a><i class="ion-alert-circled"></i></a></div>
+                          <div *ngIf="email.errors" class="alert-circle"><a><i class="ion-ios-alert-circled"></i></a></div>
                           <p style="font-size: 12px" *ngIf="email.errors">Email is niet correct!</p>
                         </div>
                       </div>
@@ -78,13 +78,13 @@
                         <textarea type="text"
                                   class="form-control"
                                   formControlName="message"
-                                  [(ngModel)]="modelEmail.emailMessage" required></textarea>
+                                  [(ngModel)]="modelEmail.emailMessage" [value]="messageValue" required></textarea>
                         <div class="placeholder">
                           Message
                         </div>
                         <div class="form-control-feedback"
                              *ngIf="message.errors && (message.dirty || message.touched)">
-                          <div *ngIf="message.errors" class="alert-circle"><a><i class="ion-alert-circled"></i></a>
+                          <div *ngIf="message.errors" class="alert-circle"><a><i class="ion-ios-alert-circled"></i></a>
                           </div>
                         </div>
                       </div>
@@ -106,7 +106,7 @@
   </div>
   <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create"
        (click)="openDetails()">
-    <p class="plus ion-email"></p>
+    <p class="plus ion-ios-mail"></p>
   </div>
 </div>
 

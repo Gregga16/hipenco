@@ -19,6 +19,12 @@
   display: flex !important;
 }
 
+.header-toggle-menu {
+  width: 50px;
+  height: 30px;
+  padding-top: 10px;
+}
+
 .header-toggler {
   width: 2rem;
   height: 2rem;

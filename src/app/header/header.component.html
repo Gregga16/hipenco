@@ -1,16 +1,20 @@
-<header class="container-fluid navbar-toggleable-md" >
+<header class="container-fluid navbar-toggleable-md">
   <div class="header py-4">
     <div class="container">
-      <div class=" logo">
-        <div class="logo">
-          <a [routerLink]="['home']">
-            <img [src]="logoImg">
-          </a>
-        </div>
+      <div class="logo">
+        <a [routerLink]="['']">
+          <img [src]="logoImg">
+        </a>
       </div>
-      <a class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="header-toggle-menu" data-toggle="collapse" data-target="#navbarSupportedContent"
+           href="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+           aria-label="Toggle navigation">
+      <a class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#navbarSupportedContent"
+         href="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+         aria-label="Toggle navigation">
         <span class="header-toggler-icon"></span>
       </a>
+      </div>
     </div>
   </div>
   <div class="collapse navbar-collapse header-nav" id="navbarSupportedContent">
@@ -19,8 +23,8 @@
         <div class="col-lg-3 ml-auto">
           <form (ngSubmit)="doSearch()" class="input-icon my-3 my-lg-0">
             <div class="form-group">
-            <input type="search" class="form-control header-search" placeholder="Search&hellip;" name="search"
-                   [(ngModel)]="term" required>
+              <input type="search" class="form-control header-search" placeholder="Search&hellip;" name="search"
+                     [(ngModel)]="term" [value]="term" required>
             </div>
             <div class="input-icon-addon">
               <i class="ion-search"></i>
@@ -29,50 +33,51 @@
         </div>
         <div class="col-lg order-lg-first">
           <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['']"><i class="ion-home"></i> Home</a>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" [routerLink]="['']"><i class="ion-ios-home"></i> Home</a>
             </li>
-            <li class="nav-item">
-              <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="ion-cube"></i>Assortiment</a>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i
+                class="ion-ios-cube"></i>Assortiment</a>
               <div class="dropdown-menu">
-                <a [routerLink]="['product']" class="dropdown-item ">Merken</a>
-                <a [routerLink]="['happyh']" class="dropdown-item ">Happy Horse</a>
-                <a [routerLink]="['gifts']" class="dropdown-item ">Cadeaubonnen</a>
-                <a href="" class="dropdown-item ">Slippers</a>
+                <a [routerLink]="['product']" class="dropdown-item">Merken</a>
+                <a [routerLink]="['happyh']" class="dropdown-item">Happy Horse</a>
+                <a [routerLink]="['gifts']" class="dropdown-item">Cadeaubonnen</a>
               </div>
             </li>
-            <li class="nav-item dropdown">
-              <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
-              <div class="dropdown-menu">
-                <a href="./maps.html" class="dropdown-item ">Maps</a>
-                <a href="./icons.html" class="dropdown-item ">Icons</a>
-                <a href="./store.html" class="dropdown-item ">Store</a>
-                <a href="./blog.html" class="dropdown-item ">Blog</a>
-              </div>
+            <!--<li class="nav-item dropdown">-->
+              <!--<a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i>-->
+                <!--Components</a>-->
+              <!--<div class="dropdown-menu">-->
+                <!--<a href="./maps.html" class="dropdown-item ">Maps</a>-->
+                <!--<a href="./icons.html" class="dropdown-item ">Icons</a>-->
+                <!--<a href="./store.html" class="dropdown-item ">Store</a>-->
+                <!--<a href="./blog.html" class="dropdown-item ">Blog</a>-->
+              <!--</div>-->
+            <!--</li>-->
+            <!--<li class="nav-item dropdown">-->
+              <!--<a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>-->
+              <!--<div class="dropdown-menu">-->
+                <!--<a href="./profile.html" class="dropdown-item ">Profile</a>-->
+                <!--<a href="./login.html" class="dropdown-item ">Login</a>-->
+                <!--<a href="./register.html" class="dropdown-item ">Register</a>-->
+                <!--<a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>-->
+                <!--<a href="./400.html" class="dropdown-item ">400 error</a>-->
+                <!--<a href="./401.html" class="dropdown-item ">401 error</a>-->
+                <!--<a href="./403.html" class="dropdown-item ">403 error</a>-->
+                <!--<a href="./404.html" class="dropdown-item ">404 error</a>-->
+                <!--<a href="./500.html" class="dropdown-item ">500 error</a>-->
+                <!--<a href="./503.html" class="dropdown-item ">503 error</a>-->
+                <!--<a href="./email.html" class="dropdown-item ">Email</a>-->
+                <!--<a href="./empty.html" class="dropdown-item ">Empty page</a>-->
+                <!--<a href="./rtl.html" class="dropdown-item ">RTL mode</a>-->
+              <!--</div>-->
+            <!--</li>-->
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" [routerLink]="['gallery']" ><i class="ion-ios-image"></i> Gallerij</a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>
-              <div class="dropdown-menu">
-                <a href="./profile.html" class="dropdown-item ">Profile</a>
-                <a href="./login.html" class="dropdown-item ">Login</a>
-                <a href="./register.html" class="dropdown-item ">Register</a>
-                <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
-                <a href="./400.html" class="dropdown-item ">400 error</a>
-                <a href="./401.html" class="dropdown-item ">401 error</a>
-                <a href="./403.html" class="dropdown-item ">403 error</a>
-                <a href="./404.html" class="dropdown-item ">404 error</a>
-                <a href="./500.html" class="dropdown-item ">500 error</a>
-                <a href="./503.html" class="dropdown-item ">503 error</a>
-                <a href="./email.html" class="dropdown-item ">Email</a>
-                <a href="./empty.html" class="dropdown-item ">Empty page</a>
-                <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['gallery']"><i class="ion-image"></i> Gallerij</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['about']"><i class="ion-person"></i> Over ons</a>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" [routerLink]="['about']"><i class="ion-ios-person"></i> Over ons</a>
             </li>
           </ul>
         </div>

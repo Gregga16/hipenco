@@ -18,6 +18,9 @@ export class AppComponent {
   name: FormControl;
   email: FormControl;
   message: FormControl;
+  nameValue = '';
+  emailValue = '';
+  messageValue = '';
 
   constructor(private emailService: EmailService, private flash: FlashService) {
     this.createFormControls();
@@ -64,6 +67,10 @@ export class AppComponent {
       this.edited = false;
     } else {
       this.edited = true;
+      this.myform.reset();
+      this.nameValue = '';
+      this.emailValue = '';
+      this.messageValue = '';
     }
   }
 }

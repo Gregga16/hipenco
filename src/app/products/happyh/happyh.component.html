@@ -185,13 +185,13 @@
         </div>
       </div>
       <ng-template #content #img let-c="close" let-d="dismiss">
-        <div class="modal-header">
-          <!--<h4 class="modal-title">Cadeaubon</h4>-->
-          <a class="close" aria-label="Close" (click)="d('Cross click')">
-          </a>
-        </div>
+        <!--<div class="modal-header">-->
+          <!--&lt;!&ndash;<h4 class="modal-title">Cadeaubon</h4>&ndash;&gt;-->
+          <!--<a class="close" aria-label="Close" (click)="d('Cross click')">-->
+          <!--</a>-->
+        <!--</div>-->
         <div class="modal-body">
-          <a class="card-aside-column card-image"><img [src]="image"></a>
+          <a class="card-aside-column card-image" aria-label="Close" (click)="d('Cross click')"><img [src]="image"></a>
         </div>
       </ng-template>
     </div>

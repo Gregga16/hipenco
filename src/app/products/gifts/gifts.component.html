@@ -3,57 +3,34 @@
     <div class="container">
       <div class="page-header">
         <h1 class="page-title">
-          Cadeaubonnen
+          Overige producten
         </h1>
       </div>
       <div class="row">
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <a style="cursor: zoom-in" (click)="open(content, 'ipanema')" class="card-aside-column card-image"><img
+              class="image-margin" src="assets/images/ipanema.jpg"></a>
             <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
+              <div class=" text-small"><h5>Ipanema Slippers</h5></div>
+              <div class="text-muted">
+                In de zomer zijn deze mooie en fijn lopende slippers van Ipanema weer beschikbaar.
               </div>
               <br>
-              <div><h4>€ 5,00</h4>
-              </div>
+              <div class="text-muted">Kom dus snel een kijkje nemen naar de verschillende modellen. </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <a style="cursor: zoom-in" (click)="open(content, 'zebrabags')" class="card-aside-column card-image"><img
+              class="image-margin" src="assets/images/zebrabags.jpg"></a>
             <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
-              </div>
+              <div class="text-small"><h5>Zebra Tassen</h5></div>
+              <div class="text-muted">
+                Voor dat het nieuwe schooljaar begint zijn deze kleurrijke, vrolijke en stevige tassen weer beschikbaar voor meisjes en stoere jongens.      </div>
               <br>
-              <div><h4>€ 10,00</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
-            <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
-              </div>
-              <br>
-              <div><h4>€ 15,00</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
-            <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
-              </div>
-              <br>
-              <div><h4>€ 20,00</h4>
-              </div>
+              <div class="text-muted"></div>
             </div>
           </div>
         </div>
@@ -61,37 +38,41 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <a style="cursor: zoom-in" (click)="open(content, 'cadeaubon')" class="card-aside-column card-image"><img
+              class="image-margin" src="assets/images/cadeaubon.jpg"></a>
             <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
+              <div class=" text-small"><h5>Hip&Co Cadeaubon</h5></div>
+              <div class="text-muted">
+                Een perfect kraamcadeau of voor een babyshower.
               </div>
               <br>
-              <div><h4>€ 25,00</h4>
-              </div>
+              <div class="text-muted">Prijs is zelf te bepalen.</div>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="card card-aside p-3">
-            <a style="cursor: zoom-in" (click)="open(content)" class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+            <a style="cursor: zoom-in" (click)="open(content, 'bergstein')" class="card-aside-column card-image"><img
+              class="image-margin" src="assets/images/bergstein.jpg"></a>
             <div class="card-body d-flex flex-column">
-              <div class="text-muted text-small">Hip&Co Cadeaubon
+              <div class="text-small"><h5>Bergstein laarsjes</h5></div>
+              <div class="text-muted">
+                In de winter zijn deze gave bergstein laarsjes weer te koop!
               </div>
               <br>
-              <div><h4>€ 30,00</h4>
-              </div>
+              <div class="text-muted">Ze zijn dan beschikbaar in verschillende kleuren.</div>
             </div>
           </div>
         </div>
       </div>
       <ng-template #content let-c="close" let-d="dismiss">
-        <div class="modal-header">
-          <h4 class="modal-title">Cadeaubon</h4>
-          <a class="close" aria-label="Close" (click)="d('Cross click')">
-          </a>
-        </div>
+        <!--<div class="modal-header">-->
+        <!--<h4 class="modal-title">Cadeaubon</h4>-->
+        <!--<a class="close" aria-label="Close" (click)="d('Cross click')">-->
+        <!--</a>-->
+        <!--</div>-->
         <div class="modal-body">
-          <a class="card-aside-column card-image"><img src="assets/images/cadeaubon.jpg"></a>
+          <a class="card-aside-column card-image" aria-label="Close" (click)="d('Cross click')"><img [src]="image"></a>
         </div>
       </ng-template>
     </div>

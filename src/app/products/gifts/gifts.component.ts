@@ -8,12 +8,15 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class GiftsComponent implements OnInit {
   closeResult: string;
+  image: string;
+
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
-  open(content) {
+  open(content, img) {
+    this.image = 'assets/images/' + img + '.jpg';
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {

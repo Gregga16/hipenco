@@ -95,7 +95,12 @@
 }
 
 .image-background {
-  height: 30vh;
+  height: 31vh;
+  object-fit: cover;
+}
+
+.image-rattle {
+  height: 27vh;
   object-fit: cover;
 }
 
@@ -132,4 +137,7 @@
   right: 20px;
 }
 
+.ion-ios-information-circle-outline {
+  font-size: 25px;
+}
 

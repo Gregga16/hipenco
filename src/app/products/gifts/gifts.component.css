@@ -13,10 +13,13 @@
 }
 
 .card-image {
-  /*width: 15%;*/
-  width: 150px;
   margin-right: 5%;
-  /*margin-left: 2%;*/
   margin-bottom: 2%;
+}
+
+.image-margin {
+  height: 21vh;
+  width: 21vh;
+  object-fit: cover;
 }
 

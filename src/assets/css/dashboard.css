@@ -3134,7 +3134,7 @@ tbody.collapse.show {
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #242378;
+  background-color: #686ca8;
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -5403,6 +5403,8 @@ button.close {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-footer {

@@ -115,6 +115,19 @@
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode:  forwards;
 }
+@media (max-width: 579px) {
+  .nd1 {
+    right: 20px;
+    bottom: 100px;
+  }
+}
+
+@media (max-height: 730px) {
+  .nd1 {
+    right: 20px;
+    bottom: 150px;
+  }
+}
 
 .content-inner {
   height: 100%;
@@ -130,7 +143,13 @@
   font-weight: 400 !important;
   letter-spacing: 1px !important;
   text-transform: uppercase;
-  padding-top: 12px;
+  padding-top: 4%;
+}
+
+@media (max-height: 600px) {
+  .content-header {
+    padding-top: 2%;
+  }
 }
 
 .content-header button {

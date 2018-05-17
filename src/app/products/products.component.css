@@ -20,10 +20,14 @@
 
 @media (max-width: 576px) {
   .text-small {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 220px;
-    height: 40px;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    max-width:185px;
+    /*height: 40px;*/
+  }
+
+  .text-big {
+    max-width: 190px;
   }
 }

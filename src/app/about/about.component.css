@@ -7,6 +7,12 @@
   font-size: 13px;
 }
 
+@media (max-width: 576px) {
+  .card-about {
+    height: 97%;
+  }
+}
+
 .image-round {
   height: 60%;
   width: 60%;
