@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   term: string = '';
   merken = 'retour, geisha, flo, lofff, lovestation, legends, tygo, vito, bnosy';
   happyhorse = 'happy, horse';
-  gift = 'gift, cadeaubon, cadeau, bon, kado';
+  gift = 'gift, cadeaubon, cadeau, bon, kado, product, overige';
   gallery = 'gallerij, instagram, insta';
   contact = 'contact, adres, hip, co';
   terms = 'ruilen, retourneren';

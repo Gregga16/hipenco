@@ -11,15 +11,22 @@
   border: 1px solid rgba(0, 40, 100, 0.12);
   border-radius: 3px;
 }
-
+.card-body {
+  padding-top: 0.5rem;
+}
 .card-image {
-  margin-right: 5%;
+  /*margin-right: 5%;*/
   margin-bottom: 2%;
 }
 
 .image-margin {
-  height: 21vh;
+  height: 23vh;
   width: 21vh;
   object-fit: cover;
 }
 
+@media (max-width: 770px) {
+  .image-margin {
+    height: 15vh;
+  }
+}
