@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
+
 declare var $: any;
 
 @Component({
@@ -12,7 +13,7 @@ export class GalleryComponent implements OnInit, AfterViewInit{
   ngOnInit() {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     $.getScript('assets/js/custom.js');
   }
 

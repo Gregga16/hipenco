@@ -143,7 +143,7 @@
   font-weight: 400 !important;
   letter-spacing: 1px !important;
   text-transform: uppercase;
-  padding-top: 4%;
+  padding-top: 2%;
 }
 
 @media (max-height: 600px) {
@@ -169,6 +169,7 @@
 
 .content-header-middle {
   width: 60%;
+  padding-top: 1%;
 }
 
 .content-header-right {
