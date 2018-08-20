@@ -30,3 +30,10 @@
     height: 15vh;
   }
 }
+
+@media (max-height: 400px) {
+  .image-margin {
+    height: 50vh;
+    width: 35vh;
+  }
+}

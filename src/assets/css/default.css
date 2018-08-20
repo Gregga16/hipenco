@@ -125,7 +125,11 @@
 @media (max-height: 730px) {
   .nd1 {
     right: 20px;
-    bottom: 150px;
+    bottom: 160px;
+  }
+
+  .nds {
+    height: 60%;
   }
 }
 
@@ -146,9 +150,10 @@
   padding-top: 2%;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 667px) {
   .content-header {
-    padding-top: 2%;
+    height: 11%;
+    padding-top: 1%;
   }
 }
 
@@ -185,6 +190,28 @@
 .content-text {
   padding: 5%;
 }
+
+@media (max-height: 400px) {
+  .content-text {
+    display: none;
+  }
+  .content-header {
+    height: 20%;
+  }
+  .content-header-middle {
+    padding-top: 3%;
+  }
+  .content-header-left {
+    padding-top: 2%;
+  }
+  .content-header-right {
+    padding-top: 2%;
+  }
+  .content-top {
+    display: none;
+  }
+}
+
 .content-middle {
   height: 60%;
 }
