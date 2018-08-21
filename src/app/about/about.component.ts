@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {} from '@types/googlemaps';
+import {latLng, marker, icon, tileLayer} from 'leaflet';
 import { NgModule } from '@angular/core';
 
 @Component({
@@ -15,32 +16,46 @@ export class AboutComponent implements OnInit {
   public latitude: any;
   longitude: any;
 
+  streetmaps = tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 25, attribution: '...' });
+
+  marker = marker([ 51.4594217, 5.6107367 ], {
+    icon: icon({
+      iconSize: [ 25, 41 ],
+      iconAnchor: [ 13, 41 ],
+      iconUrl: 'assets/images/marker-icon.png',
+      shadowUrl: 'assets/images/marker-shadow.png'
+    })
+  });
+
+  options = {
+    layers: [
+      this.streetmaps,
+      this.marker
+    ],
+    zoom: 18,
+    center: latLng(51.459404, 5.610919)
+  };
+
   constructor() {
-    this.logoImg = 'assets/images/hipenco.png'
+    this.logoImg = 'assets/images/hipenco.png';
   }
 
   ngOnInit() {
-    const myLatlng = new google.maps.LatLng(51.459404, 5.610719);
-    // const mapOptions = {
-    //   zoom: 5,
+    // this.layers.push(this.marker);
+    // const myLatlng = new google.maps.LatLng(51.459404, 5.610719);
+    // const mapProp = {
     //   center: myLatlng,
-    //   mapTypeId: google.maps.MapTypeId.ROADMAP,
-    //   // styles: [
-    //   //   {'featureType': 'water', 'elementType': 'geometry', 'stylers': [{'color': '#e9e9e9'}, {'lightness': 17}]}, {'featureType': 'landscape', 'elementType': 'geometry', 'stylers': [{'color': '#f5f5f5'}, {'lightness': 20}]}, {'featureType': 'road.highway', 'elementType': 'geometry.fill', 'stylers': [{'color': '#ffffff'}, {'lightness': 17}]}, {'featureType': 'road.highway', 'elementType': 'geometry.stroke', 'stylers': [{'color': '#ffffff'}, {'lightness': 29}, {'weight': 0.2}]}, {'featureType': 'road.arterial', 'elementType': 'geometry', 'stylers': [{'color': '#ffffff'}, {'lightness': 18}]}, {'featureType': 'road.local', 'elementType': 'geometry', 'stylers': [{'color': '#ffffff'}, {'lightness': 16}]}, {'featureType': 'poi', 'elementType': 'geometry', 'stylers': [{'color': '#f5f5f5'}, {'lightness': 21}]}, {'featureType': 'poi.park', 'elementType': 'geometry', 'stylers': [{'color': '#dedede'}, {'lightness': 21}]}, {'elementType': 'labels.text.stroke', 'stylers': [{'visibility': 'on'}, {'color': '#ffffff'}, {'lightness': 16}]}, {'elementType': 'labels.text.fill', 'stylers': [{'saturation': 36}, {'color': '#333333'}, {'lightness': 40}]}, {'elementType': 'labels.icon', 'stylers': [{'visibility': 'off'}]}, {'featureType': 'transit', 'elementType': 'geometry', 'stylers': [{'color': '#f2f2f2'}, {'lightness': 19}]}, {'featureType': 'administrative', 'elementType': 'geometry.fill', 'stylers': [{'color': '#fefefe'}, {'lightness': 20}]}, {'featureType': 'administrative', 'elementType': 'geometry.stroke', 'stylers': [{'color': '#fefefe'}, {'lightness': 17}, {'weight': 1.2}]},
-    //   // ]
+    //   zoom: 15,
+    //   mapTypeId: google.maps.MapTypeId.ROADMAP
     // };
-    const mapProp = {
-      center: myLatlng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+    //  this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+    //
+    // const marker = new google.maps.Marker({
+    //   position: myLatlng
+    // });
+    //
+    // marker.setMap(this.map);
 
-    const marker = new google.maps.Marker({
-      position: myLatlng
-    });
-
-    marker.setMap(this.map);
   }
 
   setMapType(mapTypeId: string) {
@@ -48,29 +63,29 @@ export class AboutComponent implements OnInit {
   }
 
   setCenter() {
-    this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
-
-    const location = new google.maps.LatLng(this.latitude, this.longitude);
-
-    const marker = new google.maps.Marker({
-      position: location,
-      map: this.map,
-      title: 'Got you!'
-    });
-
-    marker.addListener('click', this.simpleMarkerHandler);
-
-    marker.addListener('click', () => {
-      this.markerHandler(marker);
-    });
+    // this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
+    //
+    // const location = new google.maps.LatLng(this.latitude, this.longitude);
+    //
+    // const marker = new google.maps.Marker({
+    //   position: location,
+    //   map: this.map,
+    //   title: 'Got you!'
+    // });
+    //
+    // marker.addListener('click', this.simpleMarkerHandler);
+    //
+    // marker.addListener('click', () => {
+    //   this.markerHandler(marker);
+    // });
   }
 
-  simpleMarkerHandler() {
-    alert('Simple Component\'s function...');
-  }
-
-  markerHandler(marker: google.maps.Marker) {
-    alert('Marker\'s Title: ' + marker.getTitle());
-  }
+  // simpleMarkerHandler() {
+  //   alert('Simple Component\'s function...');
+  // }
+  //
+  // markerHandler(marker: google.maps.Marker) {
+  //   alert('Marker\'s Title: ' + marker.getTitle());
+  // }
 
 }

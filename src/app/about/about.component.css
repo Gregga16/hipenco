@@ -25,3 +25,7 @@
 .border-line {
   border-bottom: 1px solid rgba(0, 40, 100, 0.12);
 }
+
+.map {
+  height: 100%;
+}

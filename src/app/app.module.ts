@@ -18,7 +18,7 @@ import {FlashService} from './_services/flash.service';
 import { TermsComponent } from './about/terms/terms.component';
 import { GiftsComponent } from './products/gifts/gifts.component';
 import { HappyhComponent } from './products/happyh/happyh.component';
-
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -53,6 +53,7 @@ const routes: Routes = [
     FlashMessagesModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
     NgbModule.forRoot(),
+    LeafletModule.forRoot(),
   ],
   providers: [
     EmailService,
